@@ -48,17 +48,16 @@ For exporting the final recommendation if the user chooses to download it.
 
 ## 🔧 Technologies and Tools
 **Python Version:** Python 3.10+
-
 **Libraries:**
 - openai — for interacting with the ChatGPT API
 - streamlit — for building a simple web interface
 - json — for formatting/storing data (if needed)
 - fpdf or reportlab — for PDF export feature
 - dotenv — for managing the API key securely
-
 **Editors / Platforms:**
 - Visual Studio Code (VS Code)
 - GitHub — for version control and sharing the code
+**Deployment:** Render
 
 ## 🧪 Testing Plan
 To ensure the program works as intended:
@@ -77,10 +76,14 @@ To ensure the program works as intended:
   - Ensure chatbot responses are not too generic.
 
 ## 🚧 Limitations
-- API Dependence: Requires internet connection and relies on OpenAI’s API service, which may be subject to availability or quota limits.
-- Token Limits: There’s a cap to how much data can be processed in one interaction (e.g., 16,385 tokens for gpt-3.5-turbo), which could affect long sessions.
-- No User Accounts: The current version doesn't store user sessions or allow them to revisit past chats.
-- Generalized Suggestions: Since the model isn’t locally trained on PH-specific course data, some recommendations may be broad or less localized.
+- **API Dependence:** Requires internet connection and relies on OpenAI’s API service, which may be subject to availability or quota limits.
+- **Token Limits:** There’s a cap to how much data can be processed in one interaction (e.g., 16,385 tokens for gpt-3.5-turbo), which could affect long sessions.
+- **No User Accounts:** The current version doesn't store user sessions or allow them to revisit past chats.
+- **Generalized Suggestions:** Since the model isn’t locally trained on PH-specific course data, some recommendations may be broad or less localized.
+- **Cloud Deployment:** The web app is hosted using a free-tier deployment platform, which can result in:
+   - Limited uptime (may "sleep" after inactivity)
+   - Slower loading times
+   - Resource constraints like memory, storage, or concurrent user caps
 
 ## 💡 Recommendations for Improvement
 - Incorporate a database to store user profiles or past recommendations for a more personalized experience.
