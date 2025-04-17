@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>About - Project Kolehiyo</title>
     <meta name="description" content="Your AI-powered college decision buddy for Filipino senior high school students.">
-    <link rel="stylesheet"  href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
-    <link rel="stylesheet"  href="assets/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/bs-theme-overrides.css') }}">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-md fixed-top navbar-shrink py-3" id="mainNav">
-        <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html"><span>Project Kolehiyo</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="{{ url_for('index') }}"><span>Project Kolehiyo</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="chat.html">Chat</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('chat') }}">Chat</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ url_for('about') }}">About</a></li>
                 </ul><a class="btn btn-primary shadow" role="button" data-bs-toggle="modal" data-bs-target="#modal-1">Donate</a>
             </div>
         </div>
@@ -61,7 +61,7 @@
                     <h4 class="modal-title fw-bold">Support the Developer</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <p>or more like... a struggling college student XD<br><br>Anyway!<br><br>If you found this project helpful and you’re feeling generous, any amount of support would mean the world to me. 🫶<br><br>As a college student powered by instant noodles and tight deadlines, your donation helps keep this passion project (and possibly my caffeine supply) alive. ☕🍜<br><br>Thanks a ton for being awesome! 💖</p><a class="btn btn-secondary" role="button" href="signup.html" data-bs-toggle="modal" data-bs-target="#modal-2">Donate</a>
+                    <p>or more like... a struggling college student XD<br><br>Anyway!<br><br>If you found this project helpful and you’re feeling generous, any amount of support would mean the world to me. 🫶<br><br>As a college student powered by instant noodles and tight deadlines, your donation helps keep this passion project (and possibly my caffeine supply) alive. ☕🍜<br><br>Thanks a ton for being awesome! 💖</p><a class="btn btn-secondary" role="button" data-bs-toggle="modal" data-bs-target="#modal-2">Donate</a>
                 </div>
                 <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button></div>
             </div>
@@ -73,14 +73,14 @@
                 <div class="modal-header">
                     <h4 class="modal-title">GCash QR Code</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
                 </div>
-                <div class="modal-body" style="text-align: center;"><img class="pb-0 w-100" style="height: initial;" src="assets/img/489523914_674916141962822_5059937341007216183_n.jpg"></div>
+                <div class="modal-body" style="text-align: center;"><img class="pb-0 w-100" style="height: initial;" src="{{ url_for('static', filename='assets/img/489523914_674916141962822_5059937341007216183_n.jpg') }}"></div>
                 <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal" data-bs-target="#modal-1" data-bs-toggle="modal">Back</button></div>
             </div>
         </div>
     </div>
-    <script src=" assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src=" assets/js/chat.js"></script>
-    <script src=" assets/js/startup-modern.js"></script>
+    <script src="{{ url_for('static', filename='assets/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/chat.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/startup-modern.js') }}"></script>
 </body>
 
 </html>
