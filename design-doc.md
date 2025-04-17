@@ -46,7 +46,7 @@ For storing sample question sets or test data. This keeps the format structured 
 **Python Version:** Python 3.10+
 **Libraries:**
 - openai — for interacting with the ChatGPT API
-- streamlit — for building a simple web interface
+- flask — for building backend and serving foundation for routing
 - json — for formatting/storing data (if needed)
 - dotenv — for managing the API key securely
   
