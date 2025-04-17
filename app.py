@@ -40,7 +40,7 @@ base_prompt="Provide and rank 5 college programs to take as a Filipino student. 
 def generate_response(user_message, conversation_history=None):
     try:
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4.1-nano",
             messages=[
                 {"role": "system", "content": "You are a helpful assistant for Filipino students choosing college programs. Only send programs available in the Philippines. Format your responses in markdown for better readability."},
                 {"role": "user", "content": user_message}
