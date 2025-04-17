@@ -24,7 +24,6 @@ Project Kolehiyo aims to serve as a digital guidance companion—easy to access,
 - **User Input:** Users are prompted several questions about their interests, background, strengths, and lifelong goals
 - **AI-Powered Recommendations:** Chatbot generates at most 5 college programs
 - **Prograam Descriptions:** Chatbot provides brief descriptions of each recommended college program, including career paths
-- **Export Reccommendations:** Users can export the recommendation as pdf for future reference
 - **Responsive Design:** Web app should adjusts to work on different devices, from desktop to mobile
 
 ## 🧠 Program Flow / Logic
@@ -32,7 +31,6 @@ Project Kolehiyo aims to serve as a digital guidance companion—easy to access,
 2. User is prompted with a series of questions about interests, background, strengths, and lifelong goals
    > Note: The questions are designed to be directly relevant to the college program recommendations, ensuring that only necessary data is collected for the purpose of generating tailored advice.
 3. Chatbot uses OpenAI to generate up to 5 college program recommendations based on the inputs from the user
-4. OPTIONAL: User exports the recommendation as PDF
 
 ## 🗃️ Data Structures
 This project uses simple data structures suited for a lightweight chatbot web app.
@@ -42,9 +40,7 @@ Used to store the sequence of user prompts and responses for managing the chat h
 Each message in the OpenAI conversation is structured as a dictionary with role and content.
   > Example: {"role": "user", "content": "I like science and solving problems."}
 - **JSON Files (Optional):**
-For storing sample question sets, test data, or exporting interaction logs. This keeps the format structured and readable.
-- **PDF Files:**
-For exporting the final recommendation if the user chooses to download it.
+For storing sample question sets or test data. This keeps the format structured and readable.
 
 ## 🔧 Technologies and Tools
 **Python Version:** Python 3.10+
@@ -52,8 +48,8 @@ For exporting the final recommendation if the user chooses to download it.
 - openai — for interacting with the ChatGPT API
 - streamlit — for building a simple web interface
 - json — for formatting/storing data (if needed)
-- fpdf or reportlab — for PDF export feature
 - dotenv — for managing the API key securely
+  
 **Editors / Platforms:**
 - Visual Studio Code (VS Code)
 - GitHub — for version control and sharing the code
@@ -68,9 +64,6 @@ To ensure the program works as intended:
   - Empty or vague inputs (e.g. “idk”)
   - Extremely long inputs
   - Repeated answers
-- **PDF Export:**
-  - Test if the export feature works with different lengths of recommendations.
-  - Check layout and formatting of exported files.
 - **User Experience:**
   - Make sure prompts are clear and not overwhelming.
   - Ensure chatbot responses are not too generic.
