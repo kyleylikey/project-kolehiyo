@@ -54,6 +54,7 @@ For exporting the final recommendation if the user chooses to download it.
 - json — for formatting/storing data (if needed)
 - fpdf or reportlab — for PDF export feature
 - dotenv — for managing the API key securely
+  
 **Editors / Platforms:**
 - Visual Studio Code (VS Code)
 - GitHub — for version control and sharing the code
