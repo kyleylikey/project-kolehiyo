@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(async () => {
           appendMessage("bot", "Analyzing your profile and generating recommendations...");
           
-          const recommendationsResponse = await fetch('http://localhost:5000/api/chat', {
+          const recommendationsResponse = await fetch('/api/chat', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
