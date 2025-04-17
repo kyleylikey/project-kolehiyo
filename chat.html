@@ -4,11 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Contacts - Project Kolehiyo</title>
+    <title>Chat - Project Kolehiyo</title>
     <meta name="description" content="Your AI-powered college decision buddy for Filipino senior high school students.">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
     <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
+    <link rel="stylesheet" href="assets/css/chat.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
@@ -48,18 +50,27 @@
     </nav>
     <section class="py-5 mt-5 pb-0">
         <div class="container py-5 pb-0 mt-0 pt-0">
-            <div class="row" style="height: 271px;">
-                <div class="col-md-8 col-xl-6 text-center mx-auto"></div>
+            <div class="row p-3 p-xl-4 overflow-auto" style="height: 540px;">
+                <div class="col-12 p-0">
+                    <div id="chatbot-body" class="mx-auto">
+                        <div id="chatbot-messages">
+
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row d-flex justify-content-center">
-                <div class="col-md-6">
+            <div class="row p-3 p-xl-4 d-flex justify-content-center">
+                <div class="col-12">
                     <div>
-                        <form class="p-3 p-xl-4" method="post" data-bs-theme="light">
-                            <div class="mb-3"></div>
+                        <form method="post" data-bs-theme="light">
                             <div class="mb-3">
                                 <div class="row">
-                                    <div class="col-8"><textarea class="shadow form-control me-0" id="message-1" name="message" rows="1" placeholder="Message" style="height: 23.562px;"></textarea></div>
-                                    <div class="col-4 pe-0"><button class="btn btn-primary shadow d-block w-100 pe-4 ms-0" type="submit">Send </button></div>
+                                    <div class="col-8 ps-0"><textarea class="shadow form-control me-0" id="message-1" maxlength="280" onkeyup="validate()" name="message" rows="1" placeholder="Message" style="height: 23.562px;"></textarea></div>
+                                    <div class="col-4 pe-0"><button class="btn btn-secondary shadow d-block w-100 pe-4 ms-0" id="send-button" type="button">Send </button></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-8 ps-0 mt-2 d-flex flex-row-reverse"><span id="char-limit">Character count: <span id="char-count">0</span>/280</span></div>
+                                    <div class="col-4 pe-0"></div>
                                 </div>
                             </div>
                         </form>
@@ -69,7 +80,7 @@
         </div>
     </section>
     <footer>
-        <div class="container py-4 py-lg-5">
+        <div class="container pt-2 pb-4 pt-lg-3 pb-lg-5">
             <hr>
             <div class="text-muted d-flex justify-content-between align-items-center pt-3">
                 <p class="mb-0">Copyright © 2025 Project Kolehiyo</p>

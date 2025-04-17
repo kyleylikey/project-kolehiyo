@@ -1,0 +1,43 @@
+.overflow-auto {
+    scroll-behavior: smooth !important;
+}
+
+#chatbot-body {
+    height: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+#chatbot-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 100%;
+    padding-bottom: 20px; /* Add padding at bottom for better visual appearance */
+    scroll-behavior: smooth;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 12px;
+    max-width: 85%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap; 
+}
+
+.message.user {
+    background-color: #ccd5ae;
+    color: black;
+    align-self: flex-end;
+}
+
+.message.bot {
+    background-color: #dae5e9;
+    color: black;
+    align-self: flex-start;
+}
+
+.textarea_danger{
+    border:2px solid red !important;
+}
