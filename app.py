@@ -9,6 +9,13 @@ load_dotenv()
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
+from flask import render_template
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+
 # Initialize OpenAI client with API key
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
