@@ -3,15 +3,12 @@ from dotenv import load_dotenv
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from openai import OpenAI
+from flask import Flask, render_template
 
 load_dotenv()
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
-
-from flask import Flask, render_template
-
-app = Flask(__name__)
 
 @app.route("/")
 def home():
@@ -67,7 +64,7 @@ user_responses = {
 current_question = 0
 
 @app.route('/api/chat', methods=['POST'])
-def chat():
+def chat_api():
     global current_question
     data = request.json
     user_message = data.get('message', '')
